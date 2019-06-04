@@ -1,11 +1,25 @@
 language: node_js
 node_js:
   - "10.12.0"
+# Travis-CI Caching
+cache:
+  directories:
+    - node_modules
+before_script:
+  - git config user.name "${U_NAME}"
+  - git config user.email "${U_EMAIL}"
 script:
   - npm run build
-#  - npm run deploy
+  - npm run deploy
 after_success:
   - ."./travis/deploy_pr_gae.sh"
-  - export LH_MIN_PASS_SCORE=96
-  - export LH_TEST_URL=https://your.staging.server.com/
-  - node travis/runlighthouse.js $LH_TEST_URL $LH_MIN_PASS_SCORE
+  # - export LH_MIN_PASS_SCORE=96
+  # - export LH_TEST_URL=https://your.staging.server.com/
+  # - node travis/runlighthouse.js $LH_TEST_URL $LH_MIN_PASS_SCORE
+#指定分支，只有指定的分支提交时才会运行脚本
+branches:
+  only:
+    - master
+# env:
+#  global:
+   # 我将其添加到了travis-ci的环境变量中
