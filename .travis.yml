@@ -1,0 +1,8 @@
+language: node_js
+script:
+  - npm run deploy:build
+after_success:
+  - ."./travis/deploy_pr_gae.sh"
+  - export LH_MIN_PASS_SCORE=96
+  - export LH_TEST_URL=https://your.staging.server.com/
+  - node travis/runlighthouse.js $LH_TEST_URL $LH_MIN_PASS_SCORE
