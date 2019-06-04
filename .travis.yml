@@ -11,6 +11,7 @@ before_script:
   - git remote set-url origin https://${GH_TOKEN}@${GH_REF}
 script:
   - npm run build
+  - npm run clean
   - npm run deploy
 after_success:
   - git remote set-url origin https://${GH_REF}

@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "vuepress dev docs",
     "build": "vuepress build docs",
+    "clean": "gh-pages-clean",
     "deploy": "gh-pages -d dist",
     "deploy:build": "npm run build && gh-pages -d dist"
   },
