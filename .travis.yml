@@ -10,9 +10,16 @@ before_script:
   - git config user.email "${U_EMAIL}"
 script:
   - npm run build
-  - npm run deploy
+  # - npm run deploy
 after_success:
-  - ."./travis/deploy_pr_gae.sh"
+    - cd ./dist
+    - git init
+    - git config user.name "${U_NAME}"
+    - git config user.email "${U_EMAIL}"
+    - git add .
+    - git commit -m "Update GP"
+    - git push --force --quiet "https://${GH_TOKEN}@${GH_REF}" master:${P_BRANCH}
+  # - ."./travis/deploy_pr_gae.sh"
   # - export LH_MIN_PASS_SCORE=96
   # - export LH_TEST_URL=https://your.staging.server.com/
   # - node travis/runlighthouse.js $LH_TEST_URL $LH_MIN_PASS_SCORE
