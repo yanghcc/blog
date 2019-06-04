@@ -6,7 +6,7 @@
     "dev": "vuepress dev docs",
     "build": "vuepress build docs",
     "deploy": "gh-pages -d dist",
-    "deploy:build": "npm run build && gh-pages -d dist -r https://${GH_TOKEN}@${GH_REF}"
+    "deploy:build": "npm run build && gh-pages -d dist"
   },
   "license": "MIT",
   "devDependencies": {
