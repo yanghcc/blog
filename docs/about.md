@@ -15,7 +15,7 @@ sidebar: auto
 
 **有序列表**
 
-1. test
+1. travis CI自动构建发布测试
 2. hahha
 3. hoade
 4. `javascript`
