@@ -48,6 +48,7 @@ module.exports = {
           children: [
             '',
             '/note/glob',
+            '/note/vue',
             '/note/reg',
             '/note/bit-opration',
             '/note/crypto',
