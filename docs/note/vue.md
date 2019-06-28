@@ -61,3 +61,20 @@ vm.$router.replace({
   }
 })
 ```
+
+### vue-router 使用
+
+1. 路由切换，实现页面自动滚动到顶部
+
+   ```javascript
+   new Router({
+      scrollBehavior(to, from, savedPosition) {
+       if (savedPosition) {
+         return savedPosition
+       } else {
+         return { x: 0, y: 0 }
+       }
+     },
+     ...
+   })
+   ```

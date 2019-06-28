@@ -87,37 +87,63 @@
 
 ## 面试题
 
-> 关于多项赋值顺序，对象引用
+> 1. 关于多项赋值顺序，对象引用
 
 ```js
-var a = {n: 1};
-var b = a;
-a.x = a = {n: 2};
-console.log(a.x);
-console.log(b.x);
+    var a = {n: 1};
+    var b = a;
+    a.x = a = {n: 2};
+    console.log(a.x);
+    console.log(b.x);
 ```
 
->关于对象循环引用
+>2. 关于对象循环引用
 
 ```js
-var a = {n: 1}
-a.b = a;
-// 判断方法：
-// 1. JSON.stringify 如果遇到参数里有循环引用的，就会抛出一个循环调用的错误 Uncaught TypeError: Converting circular structure to JSON
-// 2. 使用递归判断
-function checkCircularReference(obj) {
-    var stack = []
-    (function fn(obj) {
-     var len
-     for (len = stack.length; len--;) {
-         if (stack[len] === obj) throw TypeError()
-     }
-     stack.push(obj)
-     for (let k in obj) {
-         const value = obj[k]
-         if (typeof value === 'object') fn(value)
-     }
-    })(obj)
-    // fn(obj)
-}
+    var a = {n: 1}
+    a.b = a;
+    // 判断方法：
+    // 1. JSON.stringify 如果遇到参数里有循环引用的，就会抛出一个循环调用的错误 Uncaught TypeError: Converting circular structure to JSON
+    // 2. 使用递归判断
+    function checkCircularReference(obj) {
+        var stack = []
+        (function fn(obj) {
+         var len
+         for (len = stack.length; len--;) {
+             if (stack[len] === obj) throw TypeError()
+         }
+         stack.push(obj)
+         for (let k in obj) {
+             const value = obj[k]
+             if (typeof value === 'object') fn(value)
+         }
+        })(obj)
+        // fn(obj)
+    }
+
+3. 如何寻找数组里面唯一不重复的元素？
+    // 输入如下数组： [1,3,4,5,7,1] 输入结果：1
+    // 思路：异或算法 A ^ A ^ B = B
+    var arr = [1,3,4,5,7,1], res = 0
+    arr.map(item => {
+        var val = item ^ item
+        res ^= val
+    })
+    console.log(res)
 ```
+
+```js
+// 实现一个new操作符功能的函数
+function _new() {
+    let target = {}
+    let [constructor, ...args] = [...arguments]    
+	target.__proto__ = constructor.prototype
+    let result = constructor.apply(target, args)
+    const resultType = typeof result
+    if (result && (resultType === 'object' || resultType === 'function')) {
+      return result
+    }
+    return target
+  }
+```
+
