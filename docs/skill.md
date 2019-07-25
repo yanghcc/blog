@@ -35,7 +35,11 @@
 
    > 主流视频格式包括：ogg、mp4、webm
    >
-   > 还包括直播流视频（m3u8格式）
+   > 还包括直播流视频（m3u8、.ts文件）
+   >
+   > blob格式的视频链接
+   >
+   > [ffmpeg](https://ffmpeg.org/) 视频工具
 
 #### css
 
@@ -49,7 +53,7 @@
 
   > event loop
   >
-  > 闭包、作用域、this关键字
+  > 闭包、作用域、this关键字、new 关键字
   >
   > 事件
   >
@@ -60,8 +64,12 @@
   > 位运算
   >
   > 正则表达式
+  >
+  > 函数柯里化、函数防抖节流
 
 - ES6+
+
+  > Promise|async/await|Class|Symbol|map|Set|...
 
 - typescript
 
@@ -69,15 +77,17 @@
 
 - 主流框架
 
-  >  vue（vuex、vue-router、nuxt.js、...）
+  >  vue（vue-cli、vuex、vue-router、nuxt.js、...）
   >
-  > react（preact、reducx、react-router、next.js、react-vr、...）
+  > react（create-react-app、preact、reducx、react-router、next.js、react-vr、...）
   >
   > anglar
 
 - ssr
 
 - pwa
+
+  > [lavas](https://lavas.baidu.com/)
 
 - lib（各种插件库）
 
@@ -87,7 +97,13 @@
   >
   > qrcode.js
   >
-  > hightlight.js|intr.js
+  > hightlight.js|intro.js
+  >
+  > jsonp|axios|flyio|$.ajax
+  >
+  > qs
+  >
+  > GraphQL
   >
   > ...
 
@@ -103,22 +119,43 @@
 - gulp、grunt
 - eslint、standardjs、prettier
 - vscode、atom、sublime、webstrom、...
-- yarn、npm
+- yarn、npm、npx
 - git、gitea、gogs、github、stackoverflow、gitlab、...
+- gitbook
+
+#### 前端其他
+
+> 性能优化
+>
+> **单元测试**（jest、mocha、...）
+>
+> 前端工程化
+>
+> 屏幕适配、浏览器兼容
+>
+> 前端安全（xss攻击、白名单制度CSP、CSRF攻击、HTTP劫持与对策）
+>
+> 微服务
+>
+> 国际化（i18n）
+>
+> 机器学习、人工智能（TensorFlow）
+>
+> serverless
+>
+> graphql|REST
 
 ### 后端 BE
 
 #### nginx
 
-> 正向代理、反向代理、负载均衡、SSL、...
+> 正向代理、反向代理、负载均衡、SSL、http2、...
 
-#### nodejs
+#### nodejs、deno
 
-- express
+- express|koa
 
-- koa
-
-- mongoDB
+- [sequelize](https://demopark.github.io/sequelize-docs-Zh-CN/)
 
 - 命令行工具
 
@@ -127,27 +164,47 @@
   > puppeteer.js
   >
   > node-crawler
+  >
+  > cheerio
 
 - nodejs版本管理
 
   > [creationix/nvm](https://github.com/creationix/nvm)、[tj/n](https://github.com/tj/n)
+  
+- node-fetch|request|got|superagent
 
-#### mysql
+- morgan|log4js|winston|consola
 
-#### redis
+- [node-schedule](https://github.com/node-schedule/node-schedule)
 
-#### 其他后端语言
+#### 数据库
 
-- python
+- redis
+- mysql
+- mongoDB
+
+#### 后端其他
+
+- python|go|php|java
+- 在线api文档 swagger
 
 ### 客户端
 
-#### 主流框架
-
 - flutter
+
 - react-native
+
 - weex
+
 - electron
+
+- hybrid app
+
+  > [framework7](https://framework7.io/)
+  >
+  > ionic
+  >
+  > cordova
 
 ### 运维
 
@@ -157,21 +214,15 @@
 
 #### docker
 
-### 其他
+- [docker 学习文档](https://yeasy.gitbooks.io/docker_practice/content/)
+- docker-compose
 
-> 性能优化
->
-> 单元测试
->
-> 前端工程化
->
-> 屏幕适配、浏览器兼容
->
-> 前端安全（xss攻击、白名单制度CSP、CSRF攻击、HTTP劫持与对策）
+#### CI/CD
 
+- travis.ci | circle.ci | gitlab.ci
 
+### 建站工具
 
-
-
-
-
+- Gatsby
+- vuepress
+- hexo
