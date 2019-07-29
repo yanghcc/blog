@@ -1,4 +1,6 @@
-# git clone克隆或下载一个仓库单个文件夹
+# git常用操作
+
+## clone git仓库单个文件夹
 
 ```bash
 git init test && cd test     //新建仓库并进入文件夹

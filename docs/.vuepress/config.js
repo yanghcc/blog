@@ -22,7 +22,7 @@ module.exports = {
     editLinks: true, // 默认是 false, 设置为 true 来启用
     // repoLabel: '查看源码',
     lastUpdated: 'Last Updated', // string | boolean
-    displayAllHeaders: true, // 显示所有页面的标题链接
+    displayAllHeaders: false, // 显示所有页面的标题链接
     // 添加导航栏
     nav: [
       { text: 'home', link: '/' },
@@ -50,13 +50,13 @@ module.exports = {
             '/note/glob',
             '/note/vue',
             '/note/reg',
+            '/note/keyword',
             '/note/bit-opration',
             '/note/crypto',
             '/note/fragmentation',
             '/note/git',
             '/note/html',
             '/note/nginx',
-            '/note/git',
             '/note/remind',
             '/note/md-sytax',
             '/note/reg',
@@ -93,7 +93,6 @@ module.exports = {
         '/collection/interview',
         '/collection/skill-tree'
       ],
-      
     }
   }
 }

@@ -19,7 +19,7 @@
 
  - iconfont
 
- - websocket、Woker
+ - websocket、Woker、websocketd、socket.io、EventSource
 
  - canvas、svg、webGL
 
@@ -53,7 +53,7 @@
 
   > event loop
   >
-  > 闭包、作用域、this关键字、new 关键字
+  > 闭包、作用域、this关键字、弱类型+动态
   >
   > 事件
   >
@@ -153,7 +153,7 @@
 
 #### nodejs、deno
 
-- express|koa
+- express|koa|eegjs
 
 - [sequelize](https://demopark.github.io/sequelize-docs-Zh-CN/)
 
@@ -177,10 +177,14 @@
 
 - [node-schedule](https://github.com/node-schedule/node-schedule)
 
+- [Inquirer.js](https://github.com/yanghcc/Inquirer.js)
+
+- [strapi](https://github.com/yanghcc/strapi)
+
 #### 数据库
 
 - redis
-- mysql
+- mysql（[node-mysql](https://www.oschina.net/translate/node-mysql-tutorial)）
 - mongoDB
 
 #### 后端其他
